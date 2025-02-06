@@ -15,16 +15,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  eg,
+  cts,
   carrent,
   jobit,
   tripguide,
   threejs,
 } from "../assets";
-
 export const navLinks = [
   {
     id: "about",
@@ -42,19 +39,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Development and UX Design",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Backend Development",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Cloud Automation",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Teaching Assistant",
     icon: creator,
   },
 ];
@@ -116,55 +113,28 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Software Development Engineer",
+    company_name: "Expedia Group",
+    icon: eg,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "May 2023 - July 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed a full-stack data analytics web application, creating a dynamic React frontend for user interaction and data visualization, including Tableau dashboards integration, supported by a Node.js backend and optimized APIs ensuring response times under 100ms for real-time insights",
+      "Built an interactive dashboard to visualize core business KPIs (e.g. monthly and weekly recurring data) by integrating data into Material-UI React Table and using Highcharts, while saving 10 hours of manual work per week and driving data-driven business decisions",
+      "Designed and maintained new features and APIs, effectively addressing software bugs to optimize user experience",
+      "Automated GitHub Actions for CI/CD pipelines, collaborated on version control via GitHub, and streamlined Jenkins and Kubernetes workflows for code deployment and testing",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Programmer Analyst",
+    company_name: "Cognizant",
+    icon: cts,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Sep 2021 - Mar 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Contributed in building the front-end of a web application for one of the largest Swedish insurance company clients for internal management of their teams using React",
+      "Used Redux and React Hooks to manage states and handled API calls with optimizing an API endpoint by making it 15% faster by lowering the round-trip time ",
+      "Participating in code reviews and providing constructive feedback to other developers",
     ],
   },
 ];
