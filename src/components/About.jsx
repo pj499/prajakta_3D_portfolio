@@ -3,6 +3,8 @@ import { styles } from '../styles'
 import { fadeIn, textVariant } from '../utils/motion.js';
 import { services } from '../constants/index.js';
 import { Tilt } from 'react-tilt';
+import {SectionWrapper} from '../hoc'
+import { saveAs } from 'file-saver';
 
 const ServiceCard = ({index, title, icon}) => {
   return (
@@ -18,6 +20,11 @@ const ServiceCard = ({index, title, icon}) => {
 }
 
 const About = () => {
+  const handleDownload = () => {
+    fetch('../assets/CV.pdf')
+      .then(response => response.blob())
+      .then(blob => saveAs(blob, 'Prajakta Pikale Resume.pdf'));
+  };
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -25,9 +32,20 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify'>
-        I'm a Master's student in Computer Science at University of Illinois, Urbana-Champaign with expertise in software development, UX design and cloud computing. Passionate about teaching, I'm also a Teaching Assistant at the University of Illinois. I have hands-on experience in full-stack web development with JavaScript, React, Node.js, Express.js, MongoDB along with cloud automation to enhance productivity. I'm quick learner and collaborate closely with cross-functional teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+
+      <div className='flex '>
+        <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify'>
+          I'm a Master's student in Computer Science at University of Illinois, Urbana-Champaign with expertise in software development, UX design and cloud computing. Passionate about teaching, I'm also a Teaching Assistant at the University of Illinois. I have hands-on experience in full-stack web development with JavaScript, React, Node.js, Express.js, MongoDB along with cloud automation to enhance productivity. I'm quick learner and collaborate closely with cross-functional teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
+        </motion.p>
+        <a rel="noopener noreferrer" className='cursor-pointer block mt-20 m-auto' onClick={handleDownload}>
+          <button className=" bg-indigo-900 hover:bg-violet-950 text-white font-bold py-2 px-4 rounded inline-flex items-center ">
+            <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+            </svg>
+            <span>Download CV</span>
+          </button>
+        </a>
+      </div>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index)=>(
@@ -38,4 +56,4 @@ const About = () => {
   )
 }
 
-export default About
+export default SectionWrapper(About, "about");
