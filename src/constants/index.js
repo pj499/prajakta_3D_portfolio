@@ -69,10 +69,10 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
+  // {
+  //   name: "TypeScript",
+  //   icon: typescript,
+  // },
   {
     name: "React JS",
     icon: reactjs,
@@ -84,6 +84,10 @@ const technologies = [
   {
     name: "Tailwind CSS",
     icon: tailwind,
+  },
+  {
+    name: "figma",
+    icon: figma,
   },
   {
     name: "Node JS",
@@ -100,10 +104,6 @@ const technologies = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
   },
   {
     name: "docker",
