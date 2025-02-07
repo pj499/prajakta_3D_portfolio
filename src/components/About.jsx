@@ -5,6 +5,7 @@ import { services } from '../constants/index.js';
 import { Tilt } from 'react-tilt';
 import {SectionWrapper} from '../hoc'
 import { saveAs } from 'file-saver';
+import {computer} from '../assets/index.js'
 
 const ServiceCard = ({index, title, icon}) => {
   return (
@@ -27,21 +28,30 @@ const About = () => {
       .then(blob => saveAs(blob, 'Prajakta Pikale Resume.pdf'));
   };
   return (
-    < >
-      <motion.div variants={textVariant()}  id="about">
+    <>
+      <motion.div variants={textVariant()} id="about">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
 
-      <div className='flex'>
-        <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-          I'm a Master's student in Computer Science at University of Illinois, Urbana-Champaign with an experience in software development, UX design and cloud computing. Interested in sharing knowledge, I'm also a Teaching Assistant at UIUC. I have hands-on experience in full-stack web development with JavaScript, React, Node.js, Express.js, MongoDB along with cloud automation to enhance productivity. I'm a quick learner and collaborate closely with cross-functional teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
+      <div className="flex">
+        <motion.p
+          variants={fadeIn('', '', 0.1, 1)}
+          className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+          I'm a Master's student in Computer Science at University of Illinois, Urbana-Champaign with an experience in
+          software development, UX design and cloud computing. Interested in sharing knowledge, I'm also a Teaching
+          Assistant at UIUC. I have hands-on experience in full-stack web development with JavaScript, React, Node.js,
+          Express.js, MongoDB along with cloud automation to enhance productivity. I'm a quick learner and collaborate
+          closely with cross-functional teams to create efficient, scalable, and user-friendly solutions that solve
+          real-world problems. Let's work together to bring your ideas to life!
         </motion.p>
       </div>
 
-      <a rel="noopener noreferrer" className='cursor-pointer block mt-20 m-auto md:mt-10 lg:mt-5'>
-        <button className="bg-indigo-900 hover:bg-indigo-950 accent-gray-200 font-medium py-2 md:py-3 lg:py-3 px-4 md:px-6 lg:px-6 rounded inline-flex items-center" onClick={handleDownload}>
+      <a rel="noopener noreferrer" className="cursor-pointer block mt-20 m-auto md:mt-10 lg:mt-5">
+        <button
+          className="bg-indigo-900 hover:bg-indigo-950 accent-gray-200 font-medium py-2 md:py-3 lg:py-3 px-4 md:px-6 lg:px-6 rounded inline-flex items-center"
+          onClick={handleDownload}>
           <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
           </svg>
@@ -49,13 +59,13 @@ const About = () => {
         </button>
       </a>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index)=>(
-          <ServiceCard key={service.title} index={index} {...service}/>
+      <div className="mt-20 flex flex-wrap gap-10">
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
     </>
-  )
+  );
 }
 
 export default SectionWrapper(About, "about");

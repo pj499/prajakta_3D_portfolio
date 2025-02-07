@@ -9,6 +9,7 @@ import close from "./close.svg";
 import quora from './quora.png';
 import fitness from './fitness.png';
 import stocksmart from './stocksmart.png'
+import computer from './computer.png'
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -61,5 +62,6 @@ export {
   tripguide,
   quora,
   fitness,
-  stocksmart
+  stocksmart,
+  computer
 };

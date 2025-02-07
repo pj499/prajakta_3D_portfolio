@@ -4,6 +4,7 @@ import {styles} from '../styles.js';
 import { ComputersCanvas } from './canvas/index.js';
 import { TypeAnimation } from 'react-type-animation';
 import { useEffect, useState } from 'react';
+import { computer } from '../assets/index.js';
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +24,6 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen mx-auto">
-
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
@@ -52,8 +52,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      {/*{!isMobile && <ComputersCanvas />}*/}
-      <ComputersCanvas/>
+      {!isMobile && <ComputersCanvas />}
+      {isMobile && <img src={computer} alt="computer" className="z-20 w-auto h-full object-contain pt-80 opacity-50 rotate-animation transition duration-500 ease-in-out" />}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-2 border-secondary flex justify-center items-start p-2 relative">
