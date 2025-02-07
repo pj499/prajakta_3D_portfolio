@@ -27,8 +27,8 @@ const About = () => {
       .then(blob => saveAs(blob, 'Prajakta Pikale Resume.pdf'));
   };
   return (
-    <>
-      <motion.div variants={textVariant()}>
+    < >
+      <motion.div variants={textVariant()}  id="about">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>

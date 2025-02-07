@@ -2,7 +2,6 @@
 import {motion} from 'framer-motion';
 import {styles} from '../styles.js';
 import { ComputersCanvas } from './canvas/index.js';
-import { saveAs } from 'file-saver';
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
