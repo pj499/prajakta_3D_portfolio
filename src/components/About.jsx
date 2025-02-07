@@ -35,7 +35,7 @@ const About = () => {
 
 
       <div className='flex'>
-        <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] sm:text-justify'>
+        <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           I'm a Master's student in Computer Science at University of Illinois, Urbana-Champaign with an experience in software development, UX design and cloud computing. Interested in sharing knowledge, I'm also a Teaching Assistant at UIUC. I have hands-on experience in full-stack web development with JavaScript, React, Node.js, Express.js, MongoDB along with cloud automation to enhance productivity. I'm a quick learner and collaborate closely with cross-functional teams to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life!
         </motion.p>
       </div>
