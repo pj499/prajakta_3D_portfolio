@@ -70,7 +70,7 @@ const Contact = () => {
     <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <div className='flex flex-row align-middle justify-between'>
-          <p className={styles.sectionSubText}>Get in touch</p>  <a href="https://www.linkedin.com/in/prajakta-pikale-799456152/" target="_blank" className='inline'><img src={linkedin} alt="linkedin" className='w-12 h-12 object-contain cursor-pointer  mt-3'/>
+          <p className={styles.sectionSubText}>Get in touch</p>  <a href="https://www.linkedin.com/in/prajakta-pikale-799456152/" target="_blank" className='inline'><img src={linkedin} alt="linkedin" className='w-12 h-12 object-contain cursor-pointer mt-3'/>
         </a>
         </div>
 
