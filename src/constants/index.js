@@ -17,10 +17,10 @@ import {
   docker,
   eg,
   cts,
-  carrent,
-  jobit,
-  tripguide,
+  stocksmart,
   threejs,
+  quora,
+  fitness
 } from "../assets";
 export const navLinks = [
   {
@@ -142,15 +142,15 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "I thought it was impossible to make a website as beautiful as our product, but Prajakta proved me wrong.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHoT_aJeMRQFQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1636637127739?e=2147483647&v=beta&t=G1z2Jyc6vNaxfk5WL9M8GcYcFkJ2MDXc4BEkcgmePNo",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "I've never met a web developer who truly cares about their clients' success like Prajakta does.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -158,7 +158,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "After Prajakta optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
@@ -168,16 +168,41 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Quara Clone",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A social Q&A platform that replicates Quora’s key features, allows users to ask questions, share answers, upvote content, and engage in discussions, providing an interactive and user-friendly experience.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+      {
         name: "mongodb",
+        color: "green-text-gradient",
+      },
+    ],
+    image: quora,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "YouFit",
+    description:
+      "A React-based fitness app featuring a vast collection of 1000+ exercises in one place. With search, pagination, and YouTube video integration, it uses RapidAPI for real-time data fetching to enhance the workout experience.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "materialui",
         color: "green-text-gradient",
       },
       {
@@ -185,49 +210,28 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: fitness,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "StockSmart",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A data-driven forecasting of fresh food demand in retail stores uses historical data to predict demand and optimize inventory. With real-time insights and advanced visualizations, retailers make informed stocking decisions and reduce waste.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "django",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "machinelearning",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
+    image: stocksmart,
     source_code_link: "https://github.com/",
   },
 ];

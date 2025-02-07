@@ -10,10 +10,10 @@ const Ball = (props) => {
     <Float speed={3} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+      <mesh castShadow receiveShadow scale={3}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color='#fff8eb'
+          // color='#ffffff'
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading={true}
@@ -37,7 +37,6 @@ const BallCanvas = ({icon}) => {
     if(controlsRef.current){
       controlsRef.current.reset();
     }
-
   };
 
   return (

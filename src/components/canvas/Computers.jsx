@@ -6,7 +6,7 @@ import CanvasLoader from '../Loader'
 const Computers = (isMobile) => {
   const computer = useGLTF('./desktop_pc/scene.gltf');
   return (
-    <mesh>
+    <mesh className='cursor-pointer'>
       <hemisphereLight intensity={3.5} groundColor='black' />
       <pointLight intensity={1.5} />
       <spotLight
@@ -39,6 +39,7 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{position: [20, 3, 5], fov: 25}}
       gl={{preserveDrawingBuffer: true}}
+
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

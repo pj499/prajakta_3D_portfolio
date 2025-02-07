@@ -10,14 +10,14 @@ const Stars = (props) => {
   const sphere = random.inSphere(new Float32Array(5000), {radius: 1});
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 40;
-    ref.current.rotation.y -= delta / 40;
+    ref.current.rotation.x -= delta / 60;
+    ref.current.rotation.y -= delta / 60;
   });
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial transparent size={0.0012} sizeAttenuation={true} depthWrite={false} color='#ffffff' opacity={0.8}/>
+      <Points ref={ref} positions={sphere}  frustumCulled {...props}>
+        <PointMaterial transparent size={0.0015} sizeAttenuation={true} depthWrite={false} color='#f272c8' opacity={0.8}/>
       </Points>
     </group>
   )

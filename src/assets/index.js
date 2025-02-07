@@ -6,6 +6,9 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import quora from './quora.png';
+import fitness from './fitness.png';
+import stocksmart from './stocksmart.png'
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -56,4 +59,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  quora,
+  fitness,
+  stocksmart
 };

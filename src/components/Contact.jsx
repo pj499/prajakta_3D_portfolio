@@ -24,6 +24,8 @@ const Contact = () => {
       ...form,
       [name]: value,
     });
+
+    console.log(form. name, form.email, form.message);
   };
 
   const handleSubmit = (e) => {
@@ -32,16 +34,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_6x5d6i3',
-        'template_2g7m9o5',
+        'service_thi9b37',
+        'template_4832r7i',
         {
           from_name: form.name,
           to_name: 'Prajakta',
           from_email: form.email,
-          to_email: 'Mg5Gn@example.com',
+          to_email: 'pjprojects499@gmail.com',
           message: form.message,
         },
-        '1bS6JWvHk5S9m9RcT'
+        '7D1YhpyovLwz3eyx8'
       )
       .then(
         () => {
@@ -53,6 +55,8 @@ const Contact = () => {
             email: '',
             message: '',
           });
+
+          console.log('sent')
         },
         (error) => {
           setLoading(false);
@@ -107,7 +111,7 @@ const Contact = () => {
           </label>
         </form>
 
-        <button type='submit' className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary mt-5'>Send</button>
+        <button type='submit' className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary mt-5' disabled={loading} onClick={handleSubmit}>Send</button>
 
       </motion.div>
 
