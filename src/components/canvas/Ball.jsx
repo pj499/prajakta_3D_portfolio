@@ -42,7 +42,7 @@ const BallCanvas = ({icon}) => {
   return (
     <Canvas
       frameLoop='demand'
-      gl={{preserveDrawingBuffer: true}}
+      // gl={{preserveDrawingBuffer: true}}
       className='cursor-pointer'
       onPointerLeave={handlePointerOut}
       onPointerEnter={handlePointerOut}
