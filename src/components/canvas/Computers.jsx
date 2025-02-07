@@ -34,7 +34,7 @@ const ComputersCanvas = () => {
   }, [])
 
   return (
-    !isMobile &&
+    // !isMobile &&
     <Canvas
       // frameLoop='demand'
       shadows
@@ -48,7 +48,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        {!isMobile && <Computers isMobile={isMobile}/>}
+        <Computers isMobile={isMobile}/>
       </Suspense>
       <Preload all />
     </Canvas>
