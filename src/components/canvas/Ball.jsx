@@ -48,7 +48,6 @@ const BallCanvas = ({icon}) => {
       onPointerEnter={handlePointerOut}
     >
       <Suspense fallback={<CanvasLoader />}>
-
         <OrbitControls
           enableZoom={false}
           ref={controlsRef}
