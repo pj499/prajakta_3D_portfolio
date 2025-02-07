@@ -49,28 +49,28 @@ const Navbar = () => {
 
 
 
-        {/*<div className='sm:hidden flex flex-1 justify-end items-center'>*/}
-        {/*  <img src={toggle ? close:menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer" onClick={()=> setToggle(!toggle)}/>*/}
-        {/*  <div className={`${!toggle ? 'hidden': 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>*/}
-        {/*    <ul className="list-none flex justify-end items-start flex-col gap-4">*/}
-        {/*      {navLinks.map((link) => (*/}
-        {/*        <li key={link.id} className={`${ active === link.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`}*/}
-        {/*            onClick={()=> {setActive(link.title); setToggle(!toggle)}}>*/}
-        {/*          <a href={`#${link.id}`}>{link.title}</a>*/}
-        {/*        </li>*/}
-        {/*      ))}*/}
-        {/*      <a rel="noopener noreferrer" className='cursor-pointer block  font-poppins font-medium cursor-pointer text-[16px] text-secondary hover:text-white'>*/}
-        {/*        <button className=" accent-gray-200 font-medium  rounded inline-flex items-center" onClick={handleDownload}>*/}
-        {/*          <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">*/}
-        {/*            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />*/}
-        {/*          </svg>*/}
-        {/*          <span className=""> CV</span>*/}
-        {/*        </button>*/}
-        {/*      </a>*/}
-        {/*    </ul>*/}
-        {/*  </div>*/}
+        <div className='sm:hidden flex flex-1 justify-end items-center'>
+          <img src={toggle ? close:menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer" onClick={()=> setToggle(!toggle)}/>
+          <div className={`${!toggle ? 'hidden': 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
+            <ul className="list-none flex justify-end items-start flex-col gap-4">
+              {navLinks.map((link) => (
+                <li key={link.id} className={`${ active === link.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`}
+                    onClick={()=> {setActive(link.title); setToggle(!toggle)}}>
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              ))}
+              <a rel="noopener noreferrer" className='cursor-pointer block  font-poppins font-medium cursor-pointer text-[16px] text-secondary hover:text-white'>
+                <button className=" accent-gray-200 font-medium  rounded inline-flex items-center" onClick={handleDownload}>
+                  <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                  </svg>
+                  <span className=""> CV</span>
+                </button>
+              </a>
+            </ul>
+          </div>
 
-        {/*</div>*/}
+        </div>
       </div>
     </nav>
   )
