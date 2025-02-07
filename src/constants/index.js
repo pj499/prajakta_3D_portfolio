@@ -167,7 +167,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Quara Clone",
+    name: "Quora Clone",
     description:
       "A social Q&A platform that replicates Quora’s key features, allows users to ask questions, share answers, upvote content, and engage in discussions, providing an interactive and user-friendly experience.",
     tags: [

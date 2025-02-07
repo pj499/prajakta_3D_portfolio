@@ -1,4 +1,4 @@
-import {Suspense} from 'react'
+import {Suspense, useRef} from 'react'
 import {Canvas} from '@react-three/fiber';
 import {Decal, Float, OrbitControls, Preload, useTexture} from '@react-three/drei';
 import CanvasLoader from '../Loader';
@@ -31,27 +31,27 @@ const Ball = (props) => {
 }
 
 const BallCanvas = ({icon}) => {
-  // const controlsRef = useRef([0, 0, 10]);
-  //
-  // const handlePointerOut = () => {
-  //   if(controlsRef.current){
-  //     controlsRef.current.reset();
-  //   }
-  // };
+  const controlsRef = useRef([0, 0, 10]);
+
+  const handlePointerOut = () => {
+    if(controlsRef.current){
+      controlsRef.current.reset();
+    }
+  };
 
   return (
     <Canvas
-      frameLoop='demand'
+      // frameLoop='demand'
       // gl={{preserveDrawingBuffer: true}}
       className='cursor-pointer'
-      // onPointerLeave={handlePointerOut}
-      // onPointerEnter={handlePointerOut}
+      onPointerLeave={handlePointerOut}
+      onPointerEnter={handlePointerOut}
     >
       <Suspense fallback={<CanvasLoader />}>
 
         <OrbitControls
           enableZoom={false}
-          // ref={controlsRef}
+          ref={controlsRef}
         />
         <Ball imgUrl={icon} />
       </Suspense>
