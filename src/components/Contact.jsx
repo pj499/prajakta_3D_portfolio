@@ -7,6 +7,8 @@ import {EarthCanvas} from './canvas';
 import {SectionWrapper} from '../hoc';
 import {slideIn} from '../utils/motion.js';
 import linkedin from '../assets/linkedin.png'
+import envelope from '../assets/envelope.png'
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -70,8 +72,20 @@ const Contact = () => {
     <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <div className='flex flex-row align-middle justify-between'>
-          <p className={styles.sectionSubText}>Get in touch</p>  <a href="https://www.linkedin.com/in/prajakta-pikale-799456152/" target="_blank" className='inline'><img src={linkedin} alt="linkedin" className='w-12 h-12 object-contain cursor-pointer mt-3'/>
-        </a>
+          <p className={styles.sectionSubText}>Get in touch</p>
+          <div className='flex justify-evenly align-middle gap-10 -mt-2'>
+            <a href="https://www.linkedin.com/in/prajakta-pikale-799456152/" target="_blank" className='inline'>
+              <img src={linkedin} alt="linkedin" className='w-10 h-10 object-contain cursor-pointer mt-3'/>
+            </a>
+
+            <a href="#" className='inline' onClick={(e) => {
+              window.location.href = "mailto:ppikale2@illinois.edu";
+              e.preventDefault();
+            }}>
+              <img src={envelope} alt="email" className='w-10 h-10 object-contain cursor-pointer mt-3'/>
+            </a>
+          </div>
+
         </div>
 
 
