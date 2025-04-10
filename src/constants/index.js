@@ -118,10 +118,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2023 - July 2024",
     points: [
-      "Developed a full-stack data analytics web application, creating a dynamic React frontend for user interaction and data visualization, including Tableau dashboards integration, supported by a Node.js backend and optimized APIs ensuring response times under 100ms for real-time insights",
-      "Built an interactive dashboard to visualize core business KPIs (e.g. monthly and weekly recurring data) by integrating data into Material-UI React Table and using Highcharts, while saving 10 hours of manual work per week and driving data-driven business decisions",
-      "Designed and maintained new features and APIs, effectively addressing software bugs to optimize user experience",
-      "Automated GitHub Actions for CI/CD pipelines, collaborated on version control via GitHub, and streamlined Jenkins and Kubernetes workflows for code deployment and testing",
+      "Developed a full-stack data analytics web platform featuring an interactive React frontend with custom-built data visualization dashboards and Tableau integration, supported by a Node.js backend  for RESTful API management",
+      "Built dynamic and interactive dashboards to visualize key business KPIs (e.g. monthly and weekly recurring data) using Material-UI React Table and Highcharts, automating reporting processes and saving 10+ hours of manual work per week while improving data-driven decision-making by 30%, collaborated with cross-functional teams",
+      "Designed, implemented, and maintained new features and backend APIs, optimizing performance to ensure response times stayed under 100ms for real-time insights, resolved software bugs with effective debugging and testing practices",
+      "Automated CI/CD pipelines using GitHub Actions, and managed version control and deployment workflows using GitHub, Jenkins, Docker, and Kubernetes, streamlining continuous integration and delivery processes",
     ],
   },
   {
@@ -131,9 +131,9 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Sep 2021 - Mar 2023",
     points: [
-      "Contributed in building the front-end of a web application for one of the largest Swedish insurance company clients for internal management of their teams using React",
-      "Used Redux and React Hooks to manage states and handled API calls with optimizing an API endpoint by making it 15% faster by lowering the round-trip time ",
-      "Participating in code reviews and providing constructive feedback to other developers",
+      "Contributed to building and maintaining the frontend of a large-scale web application for one of the leading Swedish insurance companies, aimed at streamlining internal team management workflows using React",
+      "Utilized Redux and React Hooks for efficient state management and integrated API endpoints using GraphQL and improved performance by optimizing a critical API call, resulting in a 15% reduction in round-trip time",
+      "Participated in code reviews and providing constructive feedback to other developers",
     ],
   },
 ];
