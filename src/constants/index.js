@@ -185,7 +185,7 @@ const projects = [
       },
     ],
     image: stocksmart,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/cs411-alawini/fa24-cs411-team092-SelectStar",
   },
   {
     name: "Quora Clone",
@@ -210,7 +210,7 @@ const projects = [
       },
     ],
     image: quora,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/pj499/Quora-Clone",
   },
   {
     name: "YouFit",
@@ -231,7 +231,7 @@ const projects = [
       },
     ],
     image: fitness,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/pj499/my-fitness-application-using-react/tree/master",
   },
   
 ];
