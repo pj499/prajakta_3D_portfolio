@@ -167,6 +167,27 @@ const testimonials = [
 
 const projects = [
   {
+    name: "StockSmart",
+    description:
+      "A data-driven forecasting of fresh food demand in retail stores uses historical data to predict demand and optimize inventory. With real-time insights and advanced visualizations, retailers make informed stocking decisions and reduce waste.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "django",
+        color: "green-text-gradient",
+      },
+      {
+        name: "machinelearning",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: stocksmart,
+    source_code_link: "https://github.com/",
+  },
+  {
     name: "Quora Clone",
     description:
       "A social Q&A platform that replicates Quora’s key features, allows users to ask questions, share answers, upvote content, and engage in discussions, providing an interactive and user-friendly experience.",
@@ -212,27 +233,7 @@ const projects = [
     image: fitness,
     source_code_link: "https://github.com/",
   },
-  {
-    name: "StockSmart",
-    description:
-      "A data-driven forecasting of fresh food demand in retail stores uses historical data to predict demand and optimize inventory. With real-time insights and advanced visualizations, retailers make informed stocking decisions and reduce waste.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "django",
-        color: "green-text-gradient",
-      },
-      {
-        name: "machinelearning",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: stocksmart,
-    source_code_link: "https://github.com/",
-  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
