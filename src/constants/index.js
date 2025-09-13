@@ -113,16 +113,16 @@ const technologies = [
 
 const experiences = [
   {
-    title: "AI Engineer Intern",
+    title: "AI Software Engineer (Summer Intern)",
     company_name: "University of Illinois",
     icon: uiuc,
     iconBg: "#E6DEDD",
-    date: "June 2025 - Present",
+    date: "Jun 2025 - Aug 2025",
     points: [
-"Engineered a scalable data lake platform on a HPC cluster by building data ingestion pipelines for veterinary education data, eliminating 90% of manual data refresh tasks and achieving 99% data freshness.",      
-"Implemented metadata extraction and summarization pipelines to generate semantically rich, structured metadata (keywords & summaries), tripling query speed and improving search accuracy by 40%.",
-"Built a Retrieval-Augmented Generation (RAG) system with fine-tuned models on veterinary domain data for reranking, achieving 25% increase in retrieval relevance and significantly improving precision for domain-specific queries.",
-"Developed RESTful APIs (FastAPI) and a Next.js interface for real-time AI-powered Q&A chatbot, while automating the ETL and retraining pipeline with Airflow DAGs to ensure reliability and seamless updates."
+"Developed a real-time AI-powered Q&A chatbot with a Next.js frontend and FastAPI backend, with automated ETL and retraining pipelines with Airflow, ensuring seamless updates and system reliability.",      
+"Engineered a scalable data lake platform on HPC cluster by integrating data source SDKs with Slurm jobs and Bash scripts to automate cloud data ingestion, eliminating 90% of manual effort and ensuring 99% data freshness.",
+"Designed metadata enrichment pipelines with Parquet (columnar storage) and SQLite (indexing), applying KeyBERT + BART models for keyword extraction and summarization, improving search accuracy by 40% and reducing query latency.",
+"Trained a domain-specific Retrieval-Augmented Generation (RAG) pipeline with an embedding model + Qdrant for retrieval and LLaMA 3.1 8B Instruct for generation, boosting retrieval accuracy by 25% and delivering precise answers."
     ],
   },
   {
@@ -130,12 +130,12 @@ const experiences = [
     company_name: "Expedia Group",
     icon: eg,
     iconBg: "#E6DEDD",
-    date: "May 2023 - July 2024",
+    date: "May 2023 - Jul 2024",
     points: [
-    "Developed a full-stack data analytics web platform with React-based interactive dashboards and Tableau integration, backed by Node.js REST APIs, enabling real-time visualization of 50+ business KPIs and accelerating decision-making cycles.",
-    "Built automated and dynamic dashboards using Material-UI React Table and Highcharts, eliminating 10+ hours of manual reporting per week and improving data-driven insights by 30%.",
-    "Designed, developed, and optimized new product features and backend APIs, ensuring sub-100ms response times for real-time analytics and improved platform stability by reducing critical bug recurrence by 20% with proactive debugging.",
-    "Automated CI/CD workflows for build, test, and deployment using GitHub Actions, Jenkins, Docker, and Kubernetes, cutting release cycles from every 2 weeks to daily deployments and improving deployment success rates by 40%."
+    "Delivered a full-stack data analytics platform combining multiple business performance insights into a single system, enabling real-time visualization of 50+ KPIs for 200+ stakeholders and accelerating data-driven decision-making.",
+    "Built interactive dashboards with React (Material-UI, Highcharts, Redux) and Node.js REST APIs, transforming manual reports into automated views, increasing reporting accuracy by 30% and saving 10+ hours weekly.",
+    "Launched custom dashboard views (saved/sharable configurations) using MongoDB and Express, adopted by 400+ users, while optimizing backend APIs for high-volume analytics with sub-100ms latency, improving usability and collaboration.",
+    "Automated CI/CD pipelines with GitHub Actions, Jenkins, Docker, and Kubernetes to build, test, and deploy, cutting release cycles from bi-weekly to daily and improving deployment success rates by 40%."
     ],
   },
   {
@@ -145,9 +145,9 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Sep 2021 - Mar 2023",
     points: [
-      "Developed and maintained modular React UI components for internal web applications, enhancing reusability and improving page load performance by 20%, while streamlining user workflows.",
-      "Implemented Redux and React Hooks for optimized state management and integrated GraphQL APIs, reducing API round-trip time by 15% and enhancing overall application performance and responsiveness.",
-      "Participated in code reviews and providing constructive feedback to other developers",
+      "Architected and maintained modular React components for enterprise applications, improving reusability and reducing page load times by 20%, while streamlining workflows for users.",
+      "Enhanced state management with Redux and React Hooks and integrated GraphQL APIs, reducing round-trip times by 15% and improving performance at scale.",
+      "Collaborated with cross-functional teams using Agile methodologies, contributing to sprint planning, code reviews, and pair programming, resulting in a 25% increase in team productivity and faster delivery of features.",
     ],
   },
 ];
