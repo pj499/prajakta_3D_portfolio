@@ -1,6 +1,6 @@
 import {Suspense, useEffect, useState, useRef} from 'react'
 import {Canvas} from '@react-three/fiber'
-import {OrbitControls, Preload, useGLTF} from '@react-three/drei'
+import {OrbitControls, useGLTF} from '@react-three/drei'
 import CanvasLoader from '../Loader'
 import { useFrame } from '@react-three/fiber';
 
@@ -51,9 +51,9 @@ const ComputersCanvas = () => {
   return (
     !isMobile ?
     <Canvas
-      // frameLoop='demand'
+      frameloop='demand'
       shadows
-      dpr={[1, 2]}
+      dpr={[1, 1.5]}
       camera={{position: [20, 3, 5], fov: 25}}
       // gl={{preserveDrawingBuffer: true}}
       className="w-full h-full"
@@ -67,7 +67,7 @@ const ComputersCanvas = () => {
         />
         <Computers/>
       </Suspense>
-      <Preload all />
+      {/* Preload can eagerly load all assets; skip for smaller initial payload */}
     </Canvas> : null
   )
 }
