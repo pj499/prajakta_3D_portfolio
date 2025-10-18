@@ -1,6 +1,6 @@
 import {Suspense} from 'react'
 import {Canvas} from '@react-three/fiber';
-import {OrbitControls, Preload, useGLTF} from '@react-three/drei';
+import {OrbitControls, useGLTF} from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Earth = () => {
@@ -13,7 +13,7 @@ const Earth = () => {
 
 const EarthCanvas = () => {
   return (
-    <Canvas shadows frameLoop='demand'
+    <Canvas shadows frameloop='demand' dpr={[1, 1.5]}
     // gl={{preserveDrawingBuffer: true}}
     camera={{position: [-4, 3, 6], fov: 45, near: 0.1, far: 200}}
     >
@@ -26,7 +26,7 @@ const EarthCanvas = () => {
         />
         <Earth />
       </Suspense>
-      <Preload all />
+      {/* Avoid global Preload to reduce eager loading */}
     </Canvas>
   )
 }

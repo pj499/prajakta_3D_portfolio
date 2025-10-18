@@ -1,9 +1,9 @@
-import {useState, useRef} from 'react'
+import {useState, useRef, lazy, Suspense} from 'react'
 import {motion} from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 import {styles} from '../styles';
-import {EarthCanvas} from './canvas';
+const EarthCanvas = lazy(() => import('./canvas/Earth.jsx'));
 import {SectionWrapper} from '../hoc';
 import {slideIn} from '../utils/motion.js';
 import linkedin from '../assets/linkedin.png'
@@ -75,14 +75,14 @@ const Contact = () => {
           <p className={styles.sectionSubText}>Get in touch</p>
           <div className='flex justify-evenly align-middle gap-10 -mt-2'>
             <a href="https://www.linkedin.com/in/prajakta-pikale-799456152/" target="_blank" className='inline'>
-              <img src={linkedin} alt="linkedin" className='w-10 h-10 object-contain cursor-pointer mt-3'/>
+              <img src={linkedin} loading="lazy" alt="linkedin" className='w-10 h-10 object-contain cursor-pointer mt-3'/>
             </a>
 
             <a href="#" className='inline' onClick={(e) => {
               window.location.href = "mailto:ppikale499@gmail.com";
               e.preventDefault();
             }}>
-              <img src={envelope} alt="email" className='w-10 h-10 object-contain cursor-pointer mt-3'/>
+              <img src={envelope} loading="lazy" alt="email" className='w-10 h-10 object-contain cursor-pointer mt-3'/>
             </a>
           </div>
 
@@ -141,7 +141,9 @@ const Contact = () => {
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] cursor-pointer">
-        <EarthCanvas />
+        <Suspense fallback={null}>
+          <EarthCanvas />
+        </Suspense>
       </motion.div>
     </div>
   );
