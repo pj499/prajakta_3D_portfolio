@@ -1,6 +1,6 @@
 import {Suspense, useRef} from 'react'
 import {Canvas} from '@react-three/fiber';
-import {Decal, Float, OrbitControls, Preload, useTexture} from '@react-three/drei';
+import {Decal, Float, OrbitControls, useTexture} from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Ball = (props) => {
@@ -41,7 +41,7 @@ const BallCanvas = ({icon}) => {
 
   return (
     <Canvas
-      // frameLoop='demand'
+      frameloop='demand'
       // gl={{preserveDrawingBuffer: true}}
       className='cursor-pointer'
       onPointerLeave={handlePointerOut}
@@ -54,7 +54,7 @@ const BallCanvas = ({icon}) => {
         />
         <Ball imgUrl={icon} />
       </Suspense>
-      <Preload all />
+      {/* Avoid global Preload to reduce eager loading */}
     </Canvas>
   )
 }

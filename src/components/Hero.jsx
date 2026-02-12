@@ -1,9 +1,9 @@
 // import React from 'react'
 import {motion} from 'framer-motion';
 import {styles} from '../styles.js';
-import { ComputersCanvas } from './canvas/index.js';
 import { TypeAnimation } from 'react-type-animation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
+const ComputersCanvas = lazy(() => import('./canvas/Computers.jsx'));
 import { computer } from '../assets/index.js';
 
 const Hero = () => {
@@ -52,18 +52,22 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      {!isMobile && <ComputersCanvas />}
-      {isMobile && <img src={computer} alt="computer" className="z-20 w-auto h-full object-contain pt-80 opacity-50 rotate-animation transition duration-500 ease-in-out" />}
+      {!isMobile && (
+        <Suspense fallback={null}>
+          <ComputersCanvas />
+        </Suspense>
+      )}
+      {isMobile && <img src={computer} loading="eager" alt="computer" className="z-20 w-auto h-full object-contain pt-80 opacity-50 rotate-animation transition duration-500 ease-in-out" />}
       
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-2 border-secondary flex justify-center items-start p-2 relative">
-            <motion.dev
+            <motion.div
               animate={{ y: [0, 20, 0] }}
               transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' }}
               className="w-0.5 h-5 bg-secondary mb-1"
             />
-            <motion.dev
+            <motion.div
               animate={{ y: [0, 20, 0] }}
               transition={{ duration: 3, repeat: Infinity, repeatType: 'loop' }}
               className="w-2 h-2 rounded-full bg-secondary mb-1 absolute top-6"
